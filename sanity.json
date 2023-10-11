@@ -1,0 +1,25 @@
+{
+    "root": true,
+    "project": {
+      "name": "portfolio-sanity",
+      "basePath": "/admin"
+    },
+    "api": {
+      "projectId": "gjux6mol",
+      "dataset": "production"
+    },
+    "plugins": [
+      "@sanity/base",
+      "@sanity/components",
+      "@sanity/default-layout",
+      "@sanity/default-login",
+      "@sanity/desk-tool",
+      "@sanity/google-maps-input"
+    ],
+    "parts": [
+      {
+        "name": "part:@sanity/base/schema",
+        "path": "./schemas/schema.ts"
+      }
+    ]
+  }
