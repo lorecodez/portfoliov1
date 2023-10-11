@@ -40,7 +40,7 @@ export default async function BlogList({posts}: Props) {
                 height={10}
               />
               
-              <div className='bottom-0 z-10 w-full absolute bg-opacity-30 bg-black rounded-lg drop-shadow text-white p-5 flex justify-between'>
+              <div className='bottom-0 z-10 w-full absolute bg-opacity-30 bg-black rounded-lg drop-shadow text-white p-3 flex justify-between'>
                 <div>
                   <p className='font-bold'>
                     {post.title}
@@ -52,17 +52,19 @@ export default async function BlogList({posts}: Props) {
                         year: 'numeric'
                       }
                     }} */}
-                    {post._createdAt}
+                    {/* {post._createdAt.toLocaleDateString()} */}
+                    {new Date(post._createdAt).toLocaleDateString()}
                   </p>
+                  
                 </div>
-
-                <div>
-                    {/* {post.categories.map(category => {
-                      <div key={category} className='bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-blue-500 hover:text-blue-100 transition mr-1'>
+                <div className='flex lg:flex-col flex-row gap-2'>
+                    {post.categories.map(category => (
+                      <div key={category} className='bg-gray-100 rounded-lg text-gray-500 font-bold py-1 px-4 whitespace-nowrap hover:bg-blue-500 hover:text-blue-100 transition mr-1 text-center h-fit'>
                         <p>{category.title}</p>
                       </div>
-                    })} */}
-                </div>
+                    ))}
+                  </div>
+                
               </div>
             </div>
           </Link>

@@ -58,7 +58,7 @@ export async function getBlogPosts(): Promise<BlogPost[]>{
       "mainImage": mainImage.asset-> url,
       'slug': slug.current,
       title,
-    } | order(_createdAt desc)`,
+    }`,
     {cache: 'no-store'}
   );
 
