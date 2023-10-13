@@ -36,7 +36,7 @@ export default function Contact_form() {
                     <input type="email" name="user_email" placeholder='Your Email' className='border-2 whitespace-nowrap rounded-lg px-1'/>
                     <label>Message</label>
                     <textarea name="message" className='border-2 whitespace-nowrap rounded-lg'/>
-                    <input type="submit" value="Send" className='font-bold m-4 hover:scale-105 text-gray-500 hover:bg-blue-600 transition py-3 px-4  whitespace-nowrap rounded-lg bg-gray-100'/>
+                    <input type="submit" value="Send" className='font-bold m-4 hover:scale-105 hover:text-blue-100 text-gray-500 hover:bg-blue-600 transition py-3 px-4  whitespace-nowrap rounded-lg bg-gray-100'/>
                 </fieldset>
             </form>
         </section>

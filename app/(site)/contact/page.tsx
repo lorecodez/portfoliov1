@@ -8,8 +8,8 @@ export default function contact() {
         <div className='flex flex-col items-center h-full'>
             <Contact_form/>
             <div className='w-fit justify-center'>
-                <h1 className='text-center my-4'>Contact Info:</h1>
-                <div className='flex flex-col'>
+                {/* <h1 className='text-center my-4'>Contact Info:</h1> */}
+                <div className='flex flex-col pt-3'>
                     <a href='tel:+17758254240' className='w-fit px-3 font-bold'>Phone &#x2022; +1(775) 815-4240</a>
                     <a href='mailto:contact@lorenzowashington.com' className='w-fit px-3 font-bold'>Email &#x2022; contact@lorenzowashington.com</a>
                 </div>

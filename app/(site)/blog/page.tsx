@@ -5,14 +5,12 @@ import { BlogPost } from '@/types/BlogPost';
 
 export default async function blog(){
 
-    const posts = await getBlogPosts();
-
-    posts? posts.map((post: BlogPost) => (console.log(post.title +':'+ post.categories))) : console.log('fetch error');
+    
 
     return(
         <div>
             <Blog_banner/>
-            <BlogList posts={posts}/>
+            <BlogList />
         </div>
     );
 }

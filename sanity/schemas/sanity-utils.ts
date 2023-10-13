@@ -1,6 +1,6 @@
 import {createClient, groq} from 'next-sanity';
 import {Project} from '@/types/Project';
-import {BlogPost} from '@/types/BlogPost';
+import {BlogPost} from '@/typings';
 import clientConfig from '../config/client-config';
 
 
@@ -26,7 +26,7 @@ export async function getProjects(): Promise<Project[]>{
     return data;
  }
 
- export async function getProject(slug: string): promise<Project> {
+ export async function getProject(slug: string): Promise<Project> {
   
   console.log('fetching project data');
 
@@ -65,4 +65,23 @@ export async function getBlogPosts(): Promise<BlogPost[]>{
   );
 
   return data;
+}
+
+export async function getPost(slug: string): Promise<BlogPost> {
+  
+  console.log('fetching post data');
+
+  const data = createClient(clientConfig).fetch(
+    groq`*[_type == "blogPost" && slug.current == 'testing'][0]{
+      ...,
+      author->,
+      categories[]->,
+      "mainImage": mainImage.asset-> url,
+      'slug': slug.current,
+      title,
+      description,
+    }`, 
+    { slug: slug },
+    {cache: 'no-store'},
+  )
 }
