@@ -58,7 +58,9 @@ export async function getBlogPosts(): Promise<BlogPost[]>{
       "mainImage": mainImage.asset-> url,
       'slug': slug.current,
       title,
+      description,
     }`,
+    {cache: 'no-store'},
     {cache: 'no-store'}
   );
 

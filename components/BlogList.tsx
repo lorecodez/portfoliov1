@@ -28,10 +28,10 @@ export default async function BlogList({posts}: Props) {
   return (
     <section id='blog-list' className='w-full h-full'>
       <hr className='border-slate-900 mb-10' />
-      <menu className='w-full h-full grid lg:grid-cols-3 md:gird-cols-2 gap-8'>
+      <menu className='w-full h-full grid lg:grid-cols-2 md:gird-cols-2 gap-8'>
         {posts.map(post => (
-          <Link key={post._id} href={post.slug} className='group cursor-pointer flex-col justify-center w-fit'>
-            <div className=' w-fit h-80 drop-shadow group-hover:scale-105 transition-transform duration-200 ease-out flex justify-center'>
+          <Link key={post._id} href={post.slug} className='group cursor-pointer flex-col justify-center w-'>
+            <div className=' w-full h-80 drop-shadow group-hover:scale-105 transition-transform duration-200 ease-out flex justify-center'>
               <Image
                 className='object-cover h-80 w-full rounded-lg border border-grey-500 lg:object-center'
                 src={post.mainImage}
@@ -57,15 +57,18 @@ export default async function BlogList({posts}: Props) {
                   </p>
                   
                 </div>
-                <div className='flex lg:flex-col flex-row gap-2'>
+                <div className='flex md:flex-col flex-row md:gap-y-2 gap-x-2 items-center'>
                     {post.categories.map(category => (
                       <div key={category} className='bg-gray-100 rounded-lg text-gray-500 font-bold py-1 px-4 whitespace-nowrap hover:bg-blue-500 hover:text-blue-100 transition mr-1 text-center h-fit'>
                         <p>{category.title}</p>
                       </div>
                     ))}
-                  </div>
-                
+                </div>
               </div>
+            </div>
+            <div className='mt-5 flex-1'>
+              <p className='underline text-lg font-bold'>{post.title}</p>
+              <p className='text-gray-500'>{post.description}</p>
             </div>
           </Link>
         ))}

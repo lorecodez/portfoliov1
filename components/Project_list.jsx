@@ -9,7 +9,7 @@ import Pagination from './Pagination';
 
 export default function Project_list({projects}) {
     const [currentPage, setCurrentPage] = useState(1);
-    const [projectsPerPage] = useState(6);
+    const [projectsPerPage] = useState(4);
 
     //get current projects
     const indexOfLastProject = currentPage * projectsPerPage;
@@ -20,8 +20,8 @@ export default function Project_list({projects}) {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <section id ='projects-list'>
-        <menu className='mt-5 grid lg:grid-cols-3 md:gird-cols-2 gap-8'>
+    <section id ='projects-list' className='w-full'>
+        <menu className='mt-5 grid lg:grid-cols-2 md:gird-cols-2 gap-8 w-full'>
           {currentProjects.map((project) => (
             <Link 
             href={
@@ -35,7 +35,7 @@ export default function Project_list({projects}) {
                 alt={project.name} 
                 width={750} 
                 height={300} 
-                className='object-cover rounded-lg border border-grey-500'/>
+                className='object-cover h-80 w-full rounded-lg border border-grey-500 lg:object-center'/>
               )}
               <div className='mt-2 font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent'>
                 {project.name}  

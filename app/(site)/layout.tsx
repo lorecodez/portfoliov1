@@ -17,16 +17,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className='h-max'>
-      
+      <head>
+        <link rel="icon" href="/images/favicon.png" />
+      </head>
       <body className='max-w-4xl mx-auto pt-10 h-full block'>
         <Nav/>
         <hr className='hidden'/>
-        <main className='pb-20 pt-12 h-fit flex flex-col justify-center' >
+        <main className='pb-20 pt-12 h-fit flex flex-col justify-center w-full' >
           {children}
-          
-          
         </main>
-        
       </body>
       <hr/>
       <div className='bottom-0 h-fit'>

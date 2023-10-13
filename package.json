@@ -11,7 +11,8 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@portabletext/react": "^3.0.7",
-    "next": "latest",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "next": "^13.5.4",
     "react": "latest",
     "react-dom": "latest"
   },
