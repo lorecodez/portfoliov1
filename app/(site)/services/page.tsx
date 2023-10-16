@@ -1,9 +1,10 @@
 import Link from "next/link";
 
+
 export default function services(){
     return(
         <div className="h-full">
-            <section className="flex justify-center">
+            <section className="flex items-center flex-col">
                 <fieldset className="flex flex-col gap-y-4 items-center font-bold rounded px-2 py-4 border-grey-500 border-2 md:w-1/2">
                     <legend className="md:p-2 flex p-1 justify-center self-center mx-auto">
                         <h1 className="text-center md:text-3xl text-2xl font-bold w-fit">
@@ -13,7 +14,7 @@ export default function services(){
                     <Link 
                         className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
                         href='/services/web-dev'>
-                        Web Development
+                            Web Development
                     </Link>
                     <Link 
                         className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
@@ -47,7 +48,8 @@ export default function services(){
                     </Link>
                     <Link 
                         className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
-                        href='/services/support'>On-Site Tech Support
+                        href='/services/support'>
+                            On-Site Tech Support
                     </Link>
                     <Link 
                         className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
@@ -55,6 +57,11 @@ export default function services(){
                             Home Network Configuration
                     </Link>
                 </fieldset>
+                <div className="p-10 group">
+                    <Link href='/contact' className="font-bold text-center text-2xl group-hover:scale-105 transition py-2 hover:underline w-min">
+                        Not finding what you are looking for click here to send us a message to see if we offer what you need as a service.
+                    </Link>
+                </div>
             </section>
         </div>
     );

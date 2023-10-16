@@ -28,7 +28,7 @@ after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-blac
           </h1>
         </div>
         <p className='mt-3 text-2xl text-slate-900 text-center'>
-          Web Developer & Computer Repair
+          Web Developer & Computer Services
         </p>
         <Social_media/>
         <hr className='hidden'/>
