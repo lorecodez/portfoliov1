@@ -14,13 +14,15 @@ export default function Footer() {
                     <Social_media_s/>
                 </div>
                 <div className='w-1/3'>
-                    <h2 className='text-center font-bold'>Thanks For Visiting</h2>
-                    <p></p>
+                    <h2 className='text-center font-bold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent '>
+                        Thanks For Visiting
+                    </h2>
+                    {/* <p></p> */}
                 </div>
                 <nav className='w-1/3 flex items-center justify-center flex-col h-fit'>
                     <h2 className='font-bold mt-4'>Navigate</h2>
                     {/* links go here */}
-                    <menu className='grid grid-cols-2 gap-x-4 w-max gap-y-0'>
+                    <menu className='grid grid-cols-2 gap-x-4 w-max gap-y-0 md:text-left text-center'>
                         <li className='hover:underline '><Link href='/about-me'>About Me</Link></li>
                         <li className='hover:underline '><Link href='/contact'>Contact</Link></li>
                         <li className='hover:underline '><Link href='/blog'>Blog</Link></li>
@@ -44,7 +46,7 @@ export default function Footer() {
                 </div>
                 <div className="w-full text-center">
                     <span> © 2023 All rights reserved </span>
-                    <a> Privacy Policy </a>
+                    <Link href='/privacy' className='px-2 hover:underline'> Privacy Policy </Link>
                 </div>
                 
             </footer>

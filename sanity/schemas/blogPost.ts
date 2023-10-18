@@ -60,7 +60,7 @@ const blogPost = {
         author: 'author.name',
         media: 'mainImage'
       },
-      prepare(selection) {
+      prepare(selection: {author: string}) {
         const {author} = selection
         return Object.assign({}, selection, {
           subtitle: author && `by ${author}`

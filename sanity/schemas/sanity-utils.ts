@@ -28,7 +28,7 @@ export async function getProjects(): Promise<Project[]>{
 
  export async function getProject(slug: string): Promise<Project> {
   
-  console.log('fetching project data');
+  console.log(`fetching project ${slug} data`);
 
   const data = createClient(clientConfig).fetch(
     groq`*[_type == "project" && slug.current == $slug][0]{
@@ -69,10 +69,10 @@ export async function getBlogPosts(): Promise<BlogPost[]>{
 
 export async function getPost(slug: string): Promise<BlogPost> {
   
-  console.log('fetching post data');
+  console.log(`fetching post ${slug} data`);
 
   const data = createClient(clientConfig).fetch(
-    groq`*[_type == "blogPost" && slug.current == 'testing'][0]{
+    groq`*[_type == "blogPost" && slug.current == $slug][0]{
       ...,
       author->,
       categories[]->,
@@ -81,7 +81,9 @@ export async function getPost(slug: string): Promise<BlogPost> {
       title,
       description,
     }`, 
-    { slug: slug },
+    { slug },
     {cache: 'no-store'},
   )
+
+  return data;
 }

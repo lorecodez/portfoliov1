@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Yelp_reviews from "@/components/Yelp_reviews";
 
 export default function services(){
     return(
@@ -19,17 +19,12 @@ export default function services(){
                     <Link 
                         className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
                         href='/services/repair'>
-                            Computer Repair
-                    </Link>
-                    <Link 
-                        className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
-                        href='/services/repair'>
-                            Laptop Repair
+                            Desktop & Laptop Repair
                     </Link>
                     <Link 
                         className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
                         href='/services/data'>
-                            Data Recovery and Transfer
+                            Data Transfer
                     </Link>
                     <Link 
                         className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
@@ -44,12 +39,7 @@ export default function services(){
                     <Link 
                         className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
                         href='/services/support'>
-                            Remote Tech Support
-                    </Link>
-                    <Link 
-                        className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
-                        href='/services/support'>
-                            On-Site Tech Support
+                            Technical Support
                     </Link>
                     <Link 
                         className='px-4 hover:scale-105 text-gray-500 hover:bg-blue-600 hover:text-blue-100 transition whitespace-nowrap rounded-lg bg-gray-100' 
@@ -57,12 +47,16 @@ export default function services(){
                             Home Network Configuration
                     </Link>
                 </fieldset>
-                <div className="p-10 group">
-                    <Link href='/contact' className="font-bold text-center text-2xl group-hover:scale-105 transition py-2 hover:underline w-min">
-                        Not finding what you are looking for click here to send us a message to see if we offer what you need as a service.
+                <div className="p-10 group text-center">
+                    <h3 className="font-bold text-center pt text-2xl">
+                        Not finding what you are looking for?
+                    </h3>
+                    <Link href='/contact' className="font-bold text-center text-lg group-hover:scale-105 transition py-2 hover:underline w-min">
+                         click here to send us a message to see if we offer what you need as a service.
                     </Link>
                 </div>
             </section>
+            <Yelp_reviews/>
         </div>
     );
 }

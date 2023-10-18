@@ -12,8 +12,8 @@ type Base = {
 interface BlogPost extends Base {
     author: Author;
     body: PortableTextBlock[];
-    categories: Category;
-    mainImage: Image;
+    categories: Category[];
+    mainImage: string;
     slug: Slug;
     title: string;
     description: string;

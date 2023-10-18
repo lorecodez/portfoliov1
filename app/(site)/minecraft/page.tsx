@@ -1,13 +1,10 @@
 import { getProject } from '@/sanity/schemas/sanity-utils';
 import { PortableText } from '@portabletext/react';
-import Image from 'next/image'
+import Image from 'next/image';
 
-type Props = {
-    params: {project: string};
-};
 
-type Mcdata ={
-    data: {
+
+type Mcdata = {
         status: string,
         online: boolean,
         motd: string,
@@ -18,29 +15,27 @@ type Mcdata ={
         server: {name: string, protocol: number},
         last_updated: string,
         duration: string
-    }
 }
 
-export default async function Project({ params }: Props[]) {
+export default async function Project() {
 
-    const slug = params.project;
     const project = await getProject('minecraft');
 
 
-    const initServerData = async (serverIp : string,serverPort : string) => {
+    const initServerData = async (serverIp : string,serverPort : string): Promise<Mcdata>=> {
         let data = await fetch('https://mcapi.us/server/status?ip='+serverIp+'&port='+serverPort);
-        data = await data.json();
 
-        function handleServerStatus(data : Mcdata[]){
+        function handleServerStatus(data : Mcdata){
             if(data.status=='error'){
                 console.log(data.error);
                 return false;
             }
         }
 
-        return data;
+        return await data.json();
     }
-    let mcdata = await initServerData('mc.lorenzowashington.com', '25565');
+    let mcdata = await initServerData('mc.lorenzowashington.com', '25565') as Mcdata;
+
 
     mcdata.motd = mcdata.motd.replace('§f§o','');
     mcdata.motd = mcdata.motd.replace('§0','');

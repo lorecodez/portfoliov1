@@ -10,7 +10,7 @@ export default function builds() {
         Custom PC Builds
       </h1>
       <div className='flex flex-col items-center'>
-        <p>
+        <p className='px-2'>
           Looking for something specific, maybe a little more powerful than what is on the market, I can build you a system tailored to your specific needs. Anything from number-crunching in Excel, to gaming, to running professional video editing software. You can supply your own parts, or I can help pick them for you, I will work with you to build you the best system possible for your needs. Whether you are ready to buy, just shopping around or want to see what I can offer.
         </p>
         <p className='text-center w-fit py-6 font-bold'>
