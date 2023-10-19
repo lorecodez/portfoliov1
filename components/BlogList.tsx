@@ -63,7 +63,7 @@ export default async function BlogList() {
                 </div>
                 <div className='flex flex-row md:gap-y-2 gap-x-2 items-center'>
                     {post.categories.map(category => (
-                      <div key={category.title} className='bg-gray-100 rounded-lg text-gray-500 font-bold py-1 px-4 whitespace-nowrap hover:bg-blue-500 hover:text-blue-100 transition mr-1 text-center h-fit'>
+                      <div key={category._id} className='bg-gray-100 rounded-lg text-gray-500 font-bold py-1 px-4 whitespace-nowrap mr-1 text-center h-fit'>
                         <p>{category.title}</p>
                       </div>
                     ))}

@@ -20,15 +20,15 @@ projects ? projects.map((project: Project) => (console.log(project.name))) : con
       <div className=' w-full h-fit '>
         <div className='h-[380px] max-h-[453px] max-w-full flex justify-center bg-monitor bg-contain bg-center m-0 bg-no-repeat font-mono'>
           {/* <Image src={monitor} alt='' fill className=' -z-10 relative m-0'/> */}
-          <h1 className='font-mono lg:text-4xl text-3xl font-extrabold relative w-[max-content] h-fit py-2 text-center mt-32 before:absolute before:inset-0 before:animate-typewriter before:bg-white 
+          <h1 className='font-mono lg:text-4xl md:text-3xl text-2xl font-extrabold relative w-[max-content] h-fit py-2 text-center mt-32 before:absolute before:inset-0 before:animate-typewriter before:bg-white 
 after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-black after:drop-shadow'>
             <code>
-            &gt;<span className='bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent'>Lorenzo Washington</span>
+            &gt;<span className='primary-bg'>Lorenzo Washington</span>
             </code>
           </h1>
         </div>
         <p className='mt-3 text-2xl text-slate-900 text-center hover:text-blue-500'>
-          <Link href='/services'>Web Developer & Computer Services</Link>
+          <Link href='/services'>Web Development & Computer Services</Link>
         </p>
         <Social_media/>
         <hr className='hidden'/>

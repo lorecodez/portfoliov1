@@ -6,7 +6,7 @@ import virus from '@/app/(site)/images/virus.png'
 export default function Virus() {
   return (
     <div className='flex flex-col items-center'>
-      <h1 className='text-center text-3xl font-bold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent drop-shadow pb-10 pt-4'>
+      <h1 className='text-center text-3xl font-bold primary-bg drop-shadow pb-10 pt-4'>
         Virus & Malware Removal
       </h1>
       <div className='flex flex-col items-center'>

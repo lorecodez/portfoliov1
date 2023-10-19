@@ -17,7 +17,7 @@ export default function Nav() {
         </button>
       </div>
       <nav className={`flex lg:flex-row ${navBar ? 'flex-col transition' : 'hidden lg:flex transition'} justify-between items-center lg:w-full w-fit`}>
-        <Link href='/' onClick={() => setNavBar(!navBar)}  className='  lg:mb-0 mb-2 text-center bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-2xl font-bold drop-shadow hover:scale-105 transition'>
+        <Link href='/' onClick={() => setNavBar(!navBar)}  className='  lg:mb-0 mb-2 text-center primary-bg text-2xl font-bold drop-shadow hover:scale-105 transition'>
           Home
         </Link>
         <Link href='/services' onClick={() => setNavBar(!navBar)} className=' lg:my-0 my-2  text-center text-2xl font-bold drop-shadow hover:scale-105 transition'>

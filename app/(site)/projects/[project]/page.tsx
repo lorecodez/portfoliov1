@@ -13,7 +13,7 @@ export default async function Project({ params }: Props) {
     return (
         <div className='h-fit py-15'>
             <header className='flex justify-between items-center h-full pt-5'>
-                <h1 className='bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-5xl font-extrabold drop-shadow h-ful py-2 ml-1'>{project.name}</h1>
+                <h1 className='primary-bg bg-clip-text text-transparent text-5xl font-extrabold drop-shadow h-ful py-2 ml-1'>{project.name}</h1>
                 <a href={project.url} title='View Project' target='_blank' className='bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-blue-500 hover:text-blue-100 transition mr-1'>
                     View Project
                 </a>

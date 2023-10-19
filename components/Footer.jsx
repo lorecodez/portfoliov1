@@ -14,7 +14,7 @@ export default function Footer() {
                     <Social_media_s/>
                 </div>
                 <div className='w-1/3'>
-                    <h2 className='text-center font-bold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent '>
+                    <h2 className='text-center font-bold primary-bg bg-clip-text text-transparent '>
                         Thanks For Visiting
                     </h2>
                     {/* <p></p> */}

@@ -37,7 +37,7 @@ export default function Project_list({projects}) {
                 height={300} 
                 className='object-cover h-80 w-full rounded-lg border border-grey-500 lg:object-center'/>
               )}
-              <div className='mt-2 font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent'>
+              <div className='mt-2 font-extrabold primary-bg '>
                 {project.name}  
               </div>
             </Link>

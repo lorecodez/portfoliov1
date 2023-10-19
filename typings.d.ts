@@ -21,7 +21,7 @@ interface BlogPost extends Base {
 
 interface Author extends Base{
     bio: PortableTextBlock[];
-    image: Image;
+    image: string;
     name: string;
     slug: Slug;
 };
